@@ -1,0 +1,498 @@
+{% load static %}
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DR-Mohamed ELBarr</title>
+    <link href="{% static 'home/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'home/css/MyCss.css' %}" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: Cairo;
+        src: url({% static 'home\fonts\Cairo-VariableFont.ttf' %});
+      }
+      *{
+        font-family: Cairo;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NavBar -->
+    <div class="container p-4">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'home/img/logo.svg' %}" alt="" width="100" height="80">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item p-3">
+                <a class="nav-link blacktext" href="#" id="currentpage"><b>الرئيسية</b></a>
+              </li>
+              <li class="nav-item p-3">
+                <a class="nav-link blacktext" href="#"><b>إبدأ الان</b></a>
+              </li>
+              <li class="nav-item p-3">
+                <a class="nav-link blacktext" href="#"><b>الوصفات و التمارين</b></a>
+              </li>
+              <li class="nav-item p-3">
+                <a class="nav-link blacktext" href="#"><b>التحولات</b></a>
+              </li>
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <span class="navbar-text blacktext"><b>تابعنا علي  |</b></span>
+              <a class="nav-link" href="https://www.facebook.com/DrMohamedbarr/">
+                <img src="{% static 'home\img\icon-facebooks.svg' %}" alt="" width="30" height="24">
+              </a>
+              <a class="nav-link" href="https://www.instagram.com/drmohamedbarr/">
+                <img src="{% static 'home\img\icon-instagrams.svg' %}" alt="" width="30" height="24">
+              </a>
+              <a class="nav-link" href="https://www.tiktok.com/@drmohamedbarr">
+                <img src="{% static 'home\img\icon-tiktoks.svg' %}" alt="" width="30" height="24">
+              </a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Slogan Body -->
+    <div class="container-fluid" style="background-color: white; border-bottom: solid #19AA33;"> 
+      <div class="row">
+        <div class="col-5 align-self-center text-center">
+          <img src="{% static 'home/img/broccoli.png' %}" alt="" class="img-fluid SlideInAnim" width="500vw">
+        </div>
+        <div class="col-7 PopUpAnim" style="background-repeat: no-repeat;background-position: bottom left; background-size: 60%; background-image: url({% static 'home/img/slogan-bg.svg' %});">
+          <br>
+          <h1 style="font-size: 3vmax;">فكر صح..فكر بذكاء</h1>
+          <br>
+          <p style="font-size: 1.5vmax; width: 70%;">
+            احصل على نظام غذائي صحي مناسب لأهدافك وحسب احتياجك
+            وتابع تقدمك على يد متخصص في مجال التغذية والتمارين
+            وهو دكتور/محمد البر, بادر بالتسجيل وابدأ رحلتك الأن
+          </p>
+          <br>
+          <button type="button" class="p-1 rounded-pill border-0 greenbutton" style="font-size: 2vw; width: 30%;">ابدأ التغيير</button>
+          <br><br>
+        </div>
+      </div>
+    </div>
+    <br><br>
+
+    <!--ابدا في اقل من دقيقة-->
+    <div class="container-fluid text-center" style="background-repeat: no-repeat; background-position: top; background-size: 100% 30vmax; background-image: url({% static 'img/leaf-meal-bg.png' %});">
+      <div class="row justify-content-evenly">
+        <div class="col-8">
+          <br>
+            <h1 style="font-size: 2.4vmax;">
+              <span>ابدأ رحلتك في</span><span class="greentext"> أقل من دقيقة</span>
+            </h1>
+            <br>
+            <h6 style="font-size: 1.3vmax;">
+              <p>
+                مع دكتور/ محمد البر هدفنا انك تعيش حياة صحية  و تغيير عداتك اليومية.. عشان كدة بنوفرلك
+              </p>
+              <p>
+                مجموعة من الخدمات المتعددة لجميع الفئات العمرية عشان نساعدك تعيش أحسن 
+              </p>
+              <p class="greentext">
+                لو معاناتك واحدة من المشاكل ديه يبقا انت في المكان الصح!
+              </p>
+            </h6>
+          <br>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col col-sm-2 p-2">
+          <img src="{% static 'home/img/mood-swings.svg' %}" alt="" class="img-fluid Anim">
+        </div>
+        <div class="col col-sm-2 p-2">
+          <img src="{% static 'home/img/high-pressure.svg' %}" alt="" class="img-fluid Anim">
+        </div>
+        <div class="col col-sm-2 p-2">
+          <img src="{% static 'home/img/obesity.svg' %}" alt="" class="img-fluid Anim">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div style="width: 15%;"></div>
+        <div class="col col-sm-2 p-2">
+          <img src="{% static 'home/img/exhausted.svg' %}" alt="" class="img-fluid Anim">
+        </div>
+        <div class="col col-sm-2 p-2">
+          <img src="{% static 'home/img/stomachache.svg' %}" alt="" class="img-fluid Anim">
+        </div>
+        <div style="width: 15%;"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col col-sm-3 p-2">
+          <button type="button" class="p-1 rounded-pill border-0 greenbutton" style="font-size: 1.5vmax; width: 21vmax;"> تواصل معنا للإستفسارات</button>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- DR.Barr Info -->
+    <div class="container-fluid" style="position: relative; height: calc(0.4903 * 100vw); background-repeat: no-repeat; background-position: top; background-size: cover; background-image: url({% static 'home/img/Min-Cheat2.svg' %});">
+      <img src="{% static 'home/img/floating-leaves.svg' %}" alt="" style="position: absolute; bottom: -4vh; right: 5vw; width: 12vw;">  
+      <!--<br><br>
+      <div class="row justify-content-around">
+        <div class="col-4">
+          <br><br>
+          <h1 style="font-size: 3.4vmax;">
+            <span> دكتور</span><span class="greentext">محمد حسن البر </span>
+          </h1>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <div class="row justify-content-evenly">
+          <div class="col-6" style="width:2 vw; padding-right: 10vw;">
+            <p style="font-size:1.3vmax;">صيدلي و دكتور معتمد و حاصل علي أعلي الشهادات
+              خبرة أكتر من خمس سنوات تدريب و سبع سنين تمرين لأنواع 
+              كتير من الرياضة
+            </p>
+          </div>
+          <div class="col-6"></div>
+        </div>
+        <br><br><br>
+        <div  class="row justify-content-evenly">
+          <div class="col-8" style="font-size: larger; margin-left: 15vw;">
+            <ul style="list-style-type: circle;">
+              <strong>
+                <li> <span class="blacktext">Calisthenics </span></li>     
+                <li><span class="blacktext"> Power-lifting </span></li>      
+                <li><span class="blacktext"> Weightlifting </span> </li>     
+                <li> <span class="blacktext">Bodybuilding </span></li>      
+              </strong>
+            </ul>
+          </div>
+        </div>
+        <br><br><br><br><br><br>
+        <div class="row">
+          <div class="col-6 " style="font-size:1.3vmax; padding-right: 10vw;">
+            <p>
+              “فبالتالي هقدر أوضف الأكل المناسب ليك لأني مجرب أكتر الألعاب وببقي عارف مجهودك اليومي،، ومر عليا حالات كتير سواء نوع أول  أو تاني / ضغط / حالات تكميم معدة / تحويل مسارة و غيره..”
+            </p>
+            <br><br><br><br><br>
+          </div>
+          <div class="col-4"></div>
+        </div>
+      </div>  --> 
+      
+    </div> 
+
+    <!-- Transforms -->
+    <div class="container-fluid">
+      <div class="row align-items-start justify-content-evenly text-center">
+        <div class="col-8">
+            <h1 style="font-size: 1.9vmax;">
+              <span>قبلك كتير اتغيره.. </span><span class="greentext">جه دورك دلوقتي!</span>
+            </h1>
+            <br>
+            <h6 style="font-size: 1.3vmax; max-width: 40vmax; margin: auto; color: gray;">
+              <p>
+                أسهل وأسرع طريقة للحصول على برنامجك المثالي الذي أعده أفضل المدربين وخبراء التغذية و متابعة إسبوعية للتمارين و الأكل.
+              </p>
+            </h6>
+          <br>
+        </div>
+      </div>
+      <div class="row align-content-center p-4">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-mdb-ride="true">
+          <div class="carousel-inner w-75" style="margin: auto;">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-auto" style="margin: auto;">
+                  <img src="{% static 'home/img/transform1.svg' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-auto" style="margin: auto;"><b>
+                  <p class="greentext">
+                    خسارة 18 كيلو و6% دهون
+                  </p>
+                  <p style="max-width: 35vmax;">
+                    “كنت بتحرك بصعوبة. لاقيت فيديو للدكتور  وقررت أبدأ  و انبسطت جدًا من مناسبة مستوى التمرين للياقتي المحدودة، وتنوع التغذية، وده ساعدني أستمر في هدفي، وزادت نسبة العضل، وتحسن صحتي جدًا“
+                  </p>
+                  <p>
+                    يحيي أحمد
+                  </p>
+                </b></div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-auto" style="margin: auto;">
+                  <img src="{% static 'home/img/transform2.svg' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-auto" style="margin: auto;"><b>
+                  <p class="greentext">
+                    خسارة 21 كيلو ، 15% دهون
+                  </p>
+                  <p style="max-width: 35vmax;">
+                    “لما قررت أخس بحد جربت الدكتور وحقيقي ساعدني جدًا أرجع أحب الرياضة لأنه أبتدي معايا بالتدريج وحتى لما مكنتش بلاقي وقت للجيم كنت بحول للتمارين المنزلية وقدرت أوصل مع التيم لنتيجة مرضية جًدا“
+                  </p>
+                  <p>
+                    محمد ياسين
+                  </p>
+                </b></div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-auto" style="margin: auto;">
+                  <img src="{% static 'home/img/transform3.svg' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-auto" style="margin: auto;"><b>
+                  <p class="greentext">
+                    خسارة 7 كيلو، 6% دهون
+                  </p>
+                  <p style="max-width: 35vmax;">
+                    “جربت كتير التزم بالتمارين فقط بس مكنتش بوصل لنتيجة قوية. جربت مع الدوك التزم بالتمارين والتغذية اليومية ووصلت لنتيجة اللي أنا كان نفسي فيها ورجع جسمي أفضل من الأول.”
+                  </p>
+                  <p>
+                    رنا إسماعيل
+                  </p>
+                </b></div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-auto" style="margin: auto;">
+                  <img src="{% static 'home/img/transform4.svg' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-auto" style="margin: auto;"><b>
+                  <p class="greentext">
+                    خسارة 16 كيلو، 6% دهون
+                  </p>
+                  <p style="max-width: 35vmax;">
+                    “أستمتعت جدًا بتمارين المنزل والجيم والتغذية مع الدكتور خاصة أن الأطباق اليومية سهل تحضيرها ومتعارف عليها. الحمد لله وصلت لوزني مثالي وبرشح الكوتش دايمًا لأصدقائي لأنه فعلًا حل متكامل“
+                  </p>
+                  <p>
+                    إسلام جاهين
+                  </p>
+                </b></div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-auto" style="margin: auto;">
+                  <img src="{% static 'img/transform5.svg' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-auto" style="margin: auto;"><b>
+                  <p class="greentext">
+                    خسارة 10 كيلو، 13% دهون
+                  </p>
+                  <p style="max-width: 35vmax;">
+                    “لما قررت أخس بحد جربت دكتور محمد وحقيقي ساعدني جدًا أرجع أحب الرياضة لأنه أبتدي معايا بالتدريج وحتى لما مكنتش بلاقي وقت للجيم كنت بحول للتمارين المنزلية وقدرت أوصل معايا لنتيجة مرضية جًدا“
+                  </p>
+                  <p>
+                    شريف كمال
+                  </p>
+                </b></div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col col-sm-2 p-2">
+          <img src="{% static 'home/img/shoe.svg' %}" alt="" class="img-fluid FloatAnim" style="animation-duration: 3s;">
+          <p style="margin-top: 5%;"><b>
+            برنامج تمرين مخصص <br> حسب احتياجاتك
+          </b></p>
+        </div>
+        <div class="col col-sm-2 p-2">
+          <img src="{% static 'home/img/whats.svg' %}" alt="" class="img-fluid FloatAnim" style="animation-duration: 5s;">
+          <p style="margin-top: 5%;"><b>
+            متابعة يومية عن طريق <br> الواتساب
+          </b></p>
+        </div>
+        <div class="col col-sm-2 p-2">
+          <img src="{% static 'home/img/diary.svg' %}" alt="" class="img-fluid FloatAnim" style="animation-duration: 4s;">
+          <p style="margin-top: 5%;"><b>
+            خطة غذائية <br> مخصصة لكل مشترك
+          </b></p>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+
+    <!-- Tips & Recipes -->
+    <div class="container overflow-hidden text-center">
+      <div class="row align-items-start justify-content-evenly text-center">
+        <div class="col-8">
+            <h1 style="font-size: 1.9vmax;">
+              <span>نصائح و  </span><span class="greentext">وصفات و تمارين</span>
+            </h1>
+            <br>
+            <h6 style="font-size: 1.3vmax; max-width: 40vmax; margin: auto; color: gray;">
+              <p>
+                دكتور محمد بيقدملك مجموعة من النصايح و الوصفات و التمارين في صورة فيديوهات سهلة وبسيطة عشان تسعدك توصل لهدفك مجاناً!
+              </p>
+            </h6>
+          <br>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+        <div class="col">
+          <div class="card border-0">
+            <blockquote class="instagram-media" data-instgrm-permalink= "{{video.0.video_link}}" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="{{ reel_list.video_link }}" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href= "{{ reel_list.video_link }}" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Mohamed Barr (@drmohamedbarr)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-0">
+            <blockquote class="instagram-media" data-instgrm-permalink= "{{video.1.video_link}}" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="{{ video.1.video_link }}" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href= "{{ video.1.video_link }}" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Mohamed Barr (@drmohamedbarr)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-0">
+           <blockquote class="instagram-media" data-instgrm-permalink= "{{video.2.video_link}}" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="{{ video.2.video_link }}" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href= "{{ video.2.video_link }}" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Mohamed Barr (@drmohamedbarr)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+        </div>
+      </div>
+      <br><br>
+    </div>
+    <br><br>
+
+    <!-- Footer Body
+    <div class="container">
+      <div class="row p-5 justify-content-evenly" style="font-size: small; text-align: right;">
+        <div class="col-auto">
+          <img src="{% static 'home/img/logo.svg' %}" alt="" width="100" height="80">
+        </div>
+        <div class="col-auto">
+          <h5>عن الدكتور</h5>
+          <p> المدونة <br> نظام التغذية</p>
+        </div>
+        <div class="col-auto">
+          <h5>الخصوصية</h5>
+          <p> سياسة الخصوصية <br> شروط الاستخدام </p>
+        </div>
+        <div class="col-auto">
+          <h5>تابعنا</h5>
+        </div>
+      </div>
+    </div>
+     -->
+
+    <!-- FAQ -->
+    <div class="container">
+      <div class="row align-items-start justify-content-evenly text-center">
+        <div class="col-8">
+            <h1 style="font-size: 1.9vmax;">
+              <span>أسئلة </span><span class="greentext">شائعة متكررة</span>
+            </h1>
+          <br>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+        <div class="col">
+          <div class="accordion" id="accordion1">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                  الدكتور هيقدملي ايه؟
+                </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordion1">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="accordion" id="accordion2">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                  الدكتور هيقدملي ايه؟
+                </button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion2">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="accordion" id="accordion3">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                  الدكتور هيقدملي ايه؟
+                </button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion3">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="accordion" id="accordion4">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                  الدكتور هيقدملي ايه؟
+                </button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion4">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="accordion" id="accordion5">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                  الدكتور هيقدملي ايه؟
+                </button>
+              </h2>
+              <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion5">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="accordion" id="accordion6">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                  الدكتور هيقدملي ايه؟
+                </button>
+              </h2>
+              <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordion6">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+
+    <!-- JavaScript and Popper -->
+    <script src="{% static 'home/js/popper.min.js' %}"></script>
+    <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
