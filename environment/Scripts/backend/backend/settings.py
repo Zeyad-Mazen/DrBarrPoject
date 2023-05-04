@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-8=8der^7v6z#u(js4nihz%abl*rhmu^3+ggf*2phbeggj=)^q_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.39', '192.168.1.57']
+#ALLOWED_HOSTS = ['light-boxes-fry-156-204-193-116.loca.lt']
 
 
 # Application definition
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'customadmin',
     "phonenumber_field",
+    "mathfilters",
 
 
 

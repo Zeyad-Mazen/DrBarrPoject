@@ -1,0 +1,162 @@
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+#currentpage{
+  color: #19AA33; 
+  text-decoration: underline; 
+  text-underline-offset: 8px;
+}
+.blacktext{
+  color: black;
+}
+.greentext{
+    color: #19AA33;
+}
+.nav-item{
+  font-weight: bold;
+}
+#Main-Header{
+  font-size: max(1.9vmax, 1.5rem); 
+  margin-inline: auto;
+  font-weight: 700;
+  line-height: 63px;
+}
+#Main-Section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  position: relative;
+}
+#Main-Container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+    
+  width: min(95%, 1100px);
+  margin-inline: auto;
+  padding: 2rem 0;
+}
+.Slidder-item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.Slidder-item:not(:nth-child(1)){
+  display: none;
+}
+.myCard{
+  flex: 1 1 calc(25% - 20px);
+  margin-inline: auto;
+  max-width: 460px;
+}
+iframe{
+  border-radius: 10px !important;
+}
+.instagram-media{
+  margin: auto !important;
+  width: 80% !important;
+  box-sizing: border-box !important;
+  border: 5px white solid !important;
+  overflow: hidden !important;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6) !important;
+}
+#btn-links-container{
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+.Slidder-btn{
+  position: relative;
+  padding: 0 1rem;
+}
+.btn-next{
+  right: 0rem;
+  order: 1;
+}
+.btn-prev{
+  left: 0rem;
+  order: -1;
+}
+.item-link{
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+.btn-highlight{
+  background-color: #19AA33;
+}

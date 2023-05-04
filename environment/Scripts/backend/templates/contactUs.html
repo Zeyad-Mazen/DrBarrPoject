@@ -1,0 +1,153 @@
+{% load static %}
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DR-Mohamed ELBarr</title>
+    <link href="{% static 'home/css/card-style.css' %}" rel="stylesheet">
+    <link href="{% static 'home/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'home/css/MyCss-registration.css' %}" rel="stylesheet">
+    <link href="{% static 'home/css/MyCss-contactUs.css' %}" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: Cairo;
+            src: url({% static 'home\fonts\Cairo-VariableFont.ttf' %});
+        }
+
+        * {
+            font-family: Cairo;
+        }
+    </style>
+    <script>
+        function ajaxpost() {
+            // (A) GET FORM DATA
+            var form = document.getElementById("form-message");
+            var data = new FormData(form);
+
+            // (B) AJAX
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "{% url 'contactUs' %}");
+            // What to do when server responds
+            xhr.onload = function () { console.log(this.response); };
+            xhr.send(data);
+
+            // (C) PREVENT HTML FORM SUBMIT
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <div class="container p-4">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="{% static 'home/img/logo.svg' %}" alt="" width="100" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item p-3">
+                            <a class="nav-link blacktext" href="index.html"><b>الرئيسية</b></a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link blacktext" href="registration.html"><b>إبدأ الان</b></a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link blacktext" href="reels.html"><b>النصائح و التمارين</b></a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link blacktext" href="contactUs.html" id="currentpage"><b>تواصل معانا</b></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <span class="navbar-text blacktext"><b>تابعنا علي |</b></span>
+                        <a class="nav-link" href="https://www.facebook.com/DrMohamedbarr/">
+                            <img src="{% static 'home\img\icon-facebooks.svg' %}" alt="" width="30" height="24">
+                        </a>
+                        <a class="nav-link" href="https://www.instagram.com/drmohamedbarr/">
+                            <img src="{% static 'home\img\icon-instagrams.svg' %}" alt="" width="30" height="24">
+                        </a>
+                        <a class="nav-link" href="https://www.tiktok.com/@drmohamedbarr">
+                            <img src="{% static 'home\img\icon-tiktoks.svg' %}" alt="" width="30" height="24">
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Reels Header -->
+    <div class="container overflow-hidden">
+        <div class="row align-items-start justify-content-evenly">
+            <h1 id="Main-Header">
+                <span>تواصل معانا</span>
+            </h1>
+        </div>
+    </div>
+
+    <!-- Contact Us Form -->
+    <div id="Main-Container" dir="ltr">
+        <div class="Mycol logo">
+            <img src="{% static 'home/img/DR-Barr2.svg' %}" class="img-fluid" alt="">
+        </div>
+        <div class="Mycol" dir="rtl">
+            <form action="" method="POST" id="form-message" name="form1" onsubmit="return ajaxpost()">  {% csrf_token %}
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="inputfirst">الاسم</label>
+                        <input type="text" class="form-control form1" id="inputfirst" placeholder="الاسم الأول"
+                            name="fName" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputlast"></label>
+                        <input type="text" class="form-control form1" id="inputlast" placeholder="الاسم الأخير"
+                            name="lName" required>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-group col-md-8">
+                        <label for="inputphone">رقم التليفون</label>
+                        <input type="text" class="form-control form1" id="inputphone" placeholder="رقم التليفون"
+                            pattern="[01]{2}[0-9]{9}" name="phone" required>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-group col-md-8">
+                        <label for="inputmail">البريد الإلكتروني</label>
+                        <input type="email" class="form-control form1" id="inputmail" placeholder="البريد الإلكتروني"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" required>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-group col-md-8">
+                        <label for="inputmassege">الرسالة</label>
+                        <textarea type="text" rows="4" class="form-control form1" id="inputmassege" placeholder="ادخل رسالتك..."
+                            name="message" required></textarea>
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="imgbtn" onclick="invalidINPUT()">
+                <img src="{% static 'home/img/Send.svg' %}" onmouseover="this.src='{% static 'home/img/Send-hover.svg' %}'"
+                  onmouseout="this.src='{% static 'home/img/Send.svg' %}'" alt="">
+              </button>
+            </form>
+        </div>
+    </div>
+    <!-- JavaScript and Popper -->
+    <script src="{% static 'home/js/popper.min.js' %}"></script>
+    <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'home/js/MyJs-contactUs.js' %}"></script>
+</body>
+
+</html>
