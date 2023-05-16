@@ -18,6 +18,9 @@
     </style>
   </head>
   <body>
+
+ 
+
     <!-- NavBar -->
     <div class="container p-4">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -456,11 +459,36 @@
         </div>
       </div>
     </div>
+
+	
     <br><br>
+   
 
     <!-- JavaScript and Popper -->
     <script async src="{% static 'home/js/embed.js' %}"></script>
     <script src="{% static 'home/js/popper.min.js' %}"></script>
     <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  dir="ltr"
+  intent="WELCOME"
+  chat-title="Borocolli"
+  agent-id="d436c003-8ee4-4f00-ac43-65c8b0a86860"
+  language-code="en-es"
+  chat-icon="https://i.ibb.co/FwzV7Gr/image-processing20210108-20959-1pwdiyb-2-1.png"
+ 
+></df-messenger>
+	<style>
+  df-messenger {
+   --df-messenger-bot-message: #878fac;
+   --df-messenger-button-titlebar-color: #16ab37;
+   --df-messenger-chat-background-color: #fafafa;
+   --df-messenger-font-color: white;
+   --df-messenger-send-icon: #16ab37;
+   --df-messenger-user-message: #479b3d;
+  }
+</style>
+
   </body>
 </html>

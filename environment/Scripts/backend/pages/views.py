@@ -40,14 +40,23 @@ def registration_view(request, *args, **kwargs):
 		firstTime_front = request.POST['first-time']
 		pricePlan_front = request.POST['price-plan']
 		date_front = request.POST['currentDate']
-		#mail_sender(mail_front, "Hello " + fullName_front + "\n Please confirm your registration by sending registration fees through Vcash or a bank transfer", "Confirmation Mail")
+
+		newClient = Client(full_name= fullName_front,gender= gender_front, email= mail_front,age = age_front,job= job_front,
+		      relationship_status= relationship_front, goal =goal_front, weight= weight_front, height= height_front,
+				chest_circumference= chest_front,waist_circumference= waist_front,arm_circumference= arm_front,
+			    food_allergy= foodAlergie_front, dieseases= sickness_front, surgeries= operations_front,
+			 	drugs_or_supplements= supplements_front,food_you_like= likedFood_front,food_you_do_not_like= dislikedFood_front, 
+			 	number_of_meals= meals_front, is_this_your_first_diet= firstTime_front, package= pricePlan_front, start_date= date_front)
+		newClient.save()
+
+		mail_sender(mail_front, "Hello " + fullName_front + "\n You are a step closer towards having your dream body shape!\n Please follow the following steps to complete your registration:\n 1- Pay the amount required \n 2- Reply to this email with a screenshot or a receipt of the payment \n 3- Congratulations on investing in yourself!! \n \n Warmly, \n Team Dr.Mohamed Barr", "Confirmation Mail")
 	return render(request, "registration.html",{})
 
 def mail_sender(reciver, massege, subject):
 	connection = smtp.SMTP_SSL('smtp.gmail.com', 465)	
 	
-	email_addr = 'yahiaraouf267@gmail.com'
-	email_passwd = 'zcvszpoozybfxoln'
+	email_addr = 'dr.barr.customerservice@gmail.com'
+	email_passwd = 'ciuqjormicfldkka'
 	connection.login(email_addr, email_passwd)
 
 	msg = EmailMessage()
@@ -86,5 +95,5 @@ def contactUs_view(request, *args, **kwargs):
 
 		message = "From " + fullName_front + "\n\n" + message_front + "\n\n" + phone_front + "\n" + mail_front
 
-		mail_sender("yahialion2002+drBarr@gmail.com", message, "A client massege")
+		mail_sender("dr.barr.customerservice@gmail.com", message, "A client massege")
 	return render(request, "contactUs.html", {})
