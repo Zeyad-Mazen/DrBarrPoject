@@ -5,32 +5,33 @@ const circumference = radius * 2 * Math.PI;
 
 // form1 variables
 const form1Inputs = [
-  { input: document.getElementById('inputfirst'), valid: false },
-  { input: document.getElementById('inputlast'), valid: false },
-  { input: document.getElementById('inputage'), valid: false },
-  { input: document.getElementById('inputproffession'), valid: false },
-  { input: document.getElementById('gender'), valid: false },
-  { input: document.getElementById('marital status'), valid: false },
-  { input: document.getElementById('inputmail'), valid: false },
+  { input: document.getElementById('inputfirst'), valid: false, name: 'inputfirst' },
+  { input: document.getElementById('inputlast'), valid: false, name: 'inputlast' },
+  { input: document.getElementById('inputage'), valid: false, name: 'inputage' },
+  { input: document.getElementById('inputproffession'), valid: false, name: 'inputproffession' },
+  { input: document.getElementById('gender'), valid: false, name: 'gender' },
+  { input: document.getElementById('marital status'), valid: false, name: 'marital status' },
+  { input: document.getElementById('inputmail'), valid: false, name: 'inputmail' },
 ];
 
 // form2 variables
 const form2Inputs = [
-  { input: document.getElementById('inputgoal'), valid: false },
-  { input: document.getElementById('inputweight'), valid: false },
-  { input: document.getElementById('inputheight'), valid: false },
-  { input: document.getElementById('inputchest'), valid: false },
-  { input: document.getElementById('inputwaist'), valid: false },
-  { input: document.getElementById('inputarm'), valid: false },
-  { input: document.getElementById('inputalergie'), valid: false },
-  { input: document.getElementById('inputsickness'), valid: false },
-  { input: document.getElementById('inputoperation'), valid: false },
-  { input: document.getElementById('inputdrugs'), valid: false },
-  { input: document.getElementById('inputfood1'), valid: false },
-  { input: document.getElementById('inputfood2'), valid: false },
-  { input: document.getElementById('meals'), valid: false },
-  { input: document.getElementById('diet'), valid: false },
+  { input: document.getElementById('inputgoal'), valid: false, name: 'inputgoal' },
+  { input: document.getElementById('inputweight'), valid: false, name: 'inputweight' },
+  { input: document.getElementById('inputheight'), valid: false, name: 'inputheight' },
+  { input: document.getElementById('inputchest'), valid: false, name: 'inputchest' },
+  { input: document.getElementById('inputwaist'), valid: false, name: 'inputwaist' },
+  { input: document.getElementById('inputarm'), valid: false, name: 'inputarm' },
+  { input: document.getElementById('inputalergie'), valid: false, name: 'inputalergie' },
+  { input: document.getElementById('inputsickness'), valid: false, name: 'inputsickness' },
+  { input: document.getElementById('inputoperation'), valid: false, name: 'inputoperation' },
+  { input: document.getElementById('inputdrugs'), valid: false, name: 'inputdrugs' },
+  { input: document.getElementById('inputfood1'), valid: false, name: 'inputfood1' },
+  { input: document.getElementById('inputfood2'), valid: false, name: 'inputfood2' },
+  { input: document.getElementById('meals'), valid: false, name: 'meals' },
+  { input: document.getElementById('diet'), valid: false, name: 'diet' },
 ];
+
 
 // circle function
 circle.style.strokeDasharray = `${circumference} ${circumference}`;
@@ -67,78 +68,21 @@ function addInputValidation(inputs, nextButton) {
   });
 }
 
-function radioInputValidation1(inputs, nextButton) {
-  const rad1 = document.getElementsByName("gender");
-  const rad2 = document.getElementsByName("marital status");
+function radioInputValidation(inputs, nextButtonId, radioName, labels) {
+  const radName = document.getElementsByName(radioName);
+  const radObj = inputs.find(input => input.name === radioName);
+  const nextButton = document.getElementById(nextButtonId);
 
-  for (const radio of rad1) {
+  for (const radio of radName) {
     radio.addEventListener("change", function () {
-      for (const r of rad1) {
+      for (const r of radName) {
         if (r.checked) {
-          inputs[4].valid = true;
-          document.getElementById('labelmale').removeAttribute("style");
-          document.getElementById('labelfemale').removeAttribute("style");
-          if (inputs.every(i => i.valid)) {
-            nextButton.setAttribute('data-bs-slide', 'next');
-          } else {
-            nextButton.removeAttribute('data-bs-slide');
-          }
-          setProgress(inputs);
-          break;
-        }
-      }
-    });
-  }
-  for (const radio of rad2) {
-    radio.addEventListener("change", function () {
-      for (const r of rad2) {
-        if (r.checked) {
-          inputs[5].valid = true;
-          document.getElementById('labelsingle').removeAttribute("style");
-          document.getElementById('labelmarried').removeAttribute("style");
-          if (inputs.every(i => i.valid)) {
-            nextButton.setAttribute('data-bs-slide', 'next');
-          } else {
-            nextButton.removeAttribute('data-bs-slide');
-          }
-          setProgress(inputs);
-          break;
-        }
-      }
-    });
-  }
-}
-function radioInputValidation2(inputs, nextButton) {
-  const rad3 = document.getElementsByName("meals");
-  const rad4 = document.getElementsByName("diet");
+          radObj.valid = true;
 
-  for (const radio of rad3) {
-    radio.addEventListener("change", function () {
-      for (const r of rad3) {
-        if (r.checked) {
-          inputs[12].valid = true;
-          document.getElementById('label3').removeAttribute("style");
-          document.getElementById('label4').removeAttribute("style");
-          document.getElementById('label5').removeAttribute("style");
-          document.getElementById('label6').removeAttribute("style");
-          if (inputs.every(i => i.valid)) {
-            nextButton.setAttribute('data-bs-slide', 'next');
-          } else {
-            nextButton.removeAttribute('data-bs-slide');
+          for (let index = 0; index < labels.length; index++) {
+            document.getElementById(labels[index]).removeAttribute("style");
           }
-          setProgress(inputs);
-          break;
-        }
-      }
-    });
-  }
-  for (const radio of rad4) {
-    radio.addEventListener("change", function () {
-      for (const r of rad4) {
-        if (r.checked) {
-          inputs[13].valid = true;
-          document.getElementById('labelyes').removeAttribute("style");
-          document.getElementById('labelno').removeAttribute("style");
+          
           if (inputs.every(i => i.valid)) {
             nextButton.setAttribute('data-bs-slide', 'next');
           } else {
@@ -159,14 +103,26 @@ function validateEmail(email) {
 }
 
 addInputValidation(form1Inputs, document.getElementById('form1-next'));
-radioInputValidation1(form1Inputs, document.getElementById('form1-next'));
+radioInputValidation(form1Inputs, 'form1-next', 'gender', ['labelmale','labelfemale']);
+radioInputValidation(form1Inputs, 'form1-next', 'marital status', ['labelsingle','labelmarried']);
 addInputValidation(form2Inputs, document.getElementById('form2-next'));
-radioInputValidation2(form2Inputs, document.getElementById('form2-next'));
+radioInputValidation(form2Inputs, 'form2-next', 'meals', ['label3','label4','label5','label6']);
+radioInputValidation(form2Inputs, 'form2-next', 'diet', ['labelyes','labelno']);
 
 function invalidINPUT(inputs) {
   inputs.forEach(input => {
     input.input.classList.toggle('invalid', !input.valid);
   });
+}
+function invalidRadio(inputs, radioObjName ,labelsID) {
+  const radioObj = inputs.find(input => input.name === radioObjName);
+
+  if (radioObj.valid == false) {
+    for (let index = 0; index < labelsID.length; index++) {
+      document.getElementById(labelsID[index]).style.outline = "3px solid red";
+      document.getElementById(labelsID[index]).style.color = "red";
+    }
+  }
 }
 
 // buttons functions
@@ -178,18 +134,8 @@ async function nextbtn1() {
     setProgress(form2Inputs);
   } else {
     invalidINPUT(form1Inputs);
-    if (form1Inputs[4].valid == false) {
-      document.getElementById('labelmale').style.outline = "3px solid red";
-      document.getElementById('labelmale').style.color = "red";
-      document.getElementById('labelfemale').style.outline = "3px solid red";
-      document.getElementById('labelfemale').style.color = "red";
-    }
-    if (form1Inputs[5].valid == false) {
-      document.getElementById('labelsingle').style.outline = "3px solid red";
-      document.getElementById('labelsingle').style.color = "red";
-      document.getElementById('labelmarried').style.outline = "3px solid red";
-      document.getElementById('labelmarried').style.color = "red";
-    }
+    invalidRadio(form1Inputs, 'gender', ['labelmale', 'labelfemale']);
+    invalidRadio(form1Inputs, 'marital status', ['labelsingle', 'labelmarried']);
   }
 }
 async function nextbtn2() {
@@ -203,22 +149,8 @@ async function nextbtn2() {
     setProgress(form2Inputs);
   } else {
     invalidINPUT(form2Inputs);
-    if (form2Inputs[12].valid == false) {
-      document.getElementById('label3').style.outline = "3px solid red";
-      document.getElementById('label3').style.color = "red";
-      document.getElementById('label4').style.outline = "3px solid red";
-      document.getElementById('label4').style.color = "red";
-      document.getElementById('label5').style.outline = "3px solid red";
-      document.getElementById('label5').style.color = "red";
-      document.getElementById('label6').style.outline = "3px solid red";
-      document.getElementById('label6').style.color = "red";
-    }
-    if (form2Inputs[13].valid == false) {
-      document.getElementById('labelyes').style.outline = "3px solid red";
-      document.getElementById('labelyes').style.color = "red";
-      document.getElementById('labelno').style.outline = "3px solid red";
-      document.getElementById('labelno').style.color = "red";
-    }
+    invalidRadio(form2Inputs, 'meals', ['label3', 'label4', 'label5', 'label6']);
+    invalidRadio(form2Inputs, 'diet', ['labelyes', 'labelno']);
   }
 }
 async function backbtn() {
