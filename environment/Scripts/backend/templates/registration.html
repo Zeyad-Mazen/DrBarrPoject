@@ -31,7 +31,7 @@
       // What to do when server responds
       xhr.onload = function () { console.log(this.response); };
       xhr.send(data);
-
+      
       // (C) PREVENT HTML FORM SUBMIT
       return false;
     }
@@ -515,7 +515,7 @@
                 </div>
               </div>
               <br>
-              <button type="submit" class="imgbtn" onclick="openpp()">
+              <button type="buttton" class="imgbtn" onclick="openpp();ajaxpost();">
                 <img src="{% static 'home/img/submit.svg' %}" onmouseover="this.src='{% static 'home/img/submit-hover.svg' %}'" onmouseout="this.src='{% static 'home/img/submit.svg' %}'"
                   alt="">
               </button>
@@ -528,7 +528,7 @@
                 <p>تم التسجيل بنجاح
                   من فضلك حول المبلغ على رقم فودافون كاش 01xxxxxxxxx
                 </p>
-                <button type="button" onclick="closePopup()" class="close imgbtn">
+                <button type="button" onclick="location.href='index.html'" class="close imgbtn">
                   <img src="{% static 'home/img/done.svg' %}" alt="">
                 </button>
               </div>
@@ -537,7 +537,7 @@
                 <p>تم التسجيل بنجاح
                   بالرجاء تحويل علي حساب رقم xxxx-xxxx-xxxx-xxxx
                 </p>
-                <button type="button" onclick="closePopup2()" class="close imgbtn">
+                <button type="button" onclick="location.href='index.html'" class="close imgbtn">
                   <img src="{% static 'home/img/done.svg' %}" alt="">
                 </button>
               </div>

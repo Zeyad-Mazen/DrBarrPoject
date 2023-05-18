@@ -171,13 +171,13 @@ async function backbtn2() {
 
 //price plans
 
+let choosenPlan;
+
 async function pricebtn(Obj){
   window.scrollTo({ top: 0, behavior: 'smooth' });
   await new Promise(resolve => setTimeout(resolve, 700));
   NextStep('step4');
-  handling_forms();
-  document.getElementById('current-date').value = formatDate();
-  radio_handler(Obj);
+  choosenPlan = Obj;
   let price_amount = document.getElementById("price-amount");
   
   let plan1_detail = document.getElementById("plan1-detail");
@@ -234,20 +234,10 @@ function openPopup() {
   pp1.classList.add("open-Popup");
   pp1.classList.add("PopUpAnim");
 }
-function closePopup() {
-  unblur();
-  pp1.classList.remove("open-Popup");
-  pp1.classList.remove("PopUpAnim");
-}
 function openPopup2() {
   blur();
   pp2.classList.add("open-Popup");
   pp2.classList.add("PopUpAnim");
-}
-function closePopup2() {
-  unblur();
-  pp2.classList.remove("open-Popup");
-  pp2.classList.remove("PopUpAnim");
 }
 function blur(){
   document.getElementById("blur-bg").style.visibility = "visible";
@@ -262,12 +252,13 @@ function openpp() {
   else {
     openPopup();
   }
-  document.getElementById("form-handler").submit();
+  
+  handling_forms(choosenPlan);
 }
 
 // form handler
 
-function handling_forms(){
+function handling_forms(Obj){
   createCollector();
   // form1 handler
   document.getElementById('f-name').value = document.getElementById('inputfirst').value;
@@ -293,17 +284,16 @@ function handling_forms(){
   document.getElementById('disliked-food').value = document.getElementById('inputfood2').value;
   radio_handler(document.querySelector('input[name = meals]:checked'));
   radio_handler(document.querySelector("input[name = diet]:checked"));
+  
+  document.getElementById('current-date').value = formatDate();
+
+  radio_handler(Obj);
+  
 }
 
 function radio_handler(Obj) {
   document.getElementById(Obj.value).checked = true;
 }
-
-var observer = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutationRecord) {
-      target.style.display = "none";
-  });    
-});
 
 // current date setter
 
