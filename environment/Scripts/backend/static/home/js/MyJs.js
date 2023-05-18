@@ -268,6 +268,7 @@ function openpp() {
 // form handler
 
 function handling_forms(){
+  createCollector();
   // form1 handler
   document.getElementById('f-name').value = document.getElementById('inputfirst').value;
   document.getElementById('l-name').value = document.getElementById('inputlast').value;
@@ -304,9 +305,6 @@ var observer = new MutationObserver(function(mutations) {
   });    
 });
 
-var target = document.getElementById('form-handler');
-observer.observe(target, { attributes : true, attributeFilter : ['style'] });
-
 // current date setter
 
 function padTo2Digits(num) {
@@ -330,4 +328,53 @@ function NextStep(ID) {
 function LastStep(ID) {
   let Obj = document.getElementById(ID);
   Obj.style.backgroundPosition = "Right";
+}
+
+
+function createCollector() {
+  // Create the form element
+  const formElement = document.getElementById("form-handler");
+  
+  // Add the form fields
+  const fieldElements = [
+    { type: 'text', id: 'f-name', name: 'fName' },
+    { type: 'text', id: 'l-name', name: 'lName' },
+    { type: 'radio', name: 'gender-type', id: 'male', value: 'male' },
+    { type: 'radio', name: 'gender-type', id: 'female', value: 'female' },
+    { type: 'email', id: 'mail', name: 'mail' },
+    { type: 'number', id: 'age', name: 'age' },
+    { type: 'text', id: 'job', name: 'job' },
+    { type: 'radio', name: 'relationship', id: 'single', value: 'single' },
+    { type: 'radio', name: 'relationship', id: 'married', value: 'married' },
+    { type: 'text', id: 'goal', name: 'goal' },
+    { type: 'number', id: 'weight', name: 'weight' },
+    { type: 'number', id: 'height', name: 'height' },
+    { type: 'number', id: 'chest', name: 'chest' },
+    { type: 'number', id: 'waist', name: 'waist' },
+    { type: 'number', id: 'arm', name: 'arm' },
+    { type: 'text', id: 'food-alergie', name: 'foodAlergie' },
+    { type: 'text', id: 'sickness', name: 'sickness' },
+    { type: 'text', id: 'operations', name: 'operations' },
+    { type: 'text', id: 'supplements', name: 'supplements' },
+    { type: 'text', id: 'liked-food', name: 'likedFood' },
+    { type: 'text', id: 'disliked-food', name: 'dislikedFood' },
+    { type: 'radio', name: 'meals', id: 'three', value: 'three' },
+    { type: 'radio', name: 'meals', id: 'four', value: 'four' },
+    { type: 'radio', name: 'meals', id: 'five', value: 'five' },
+    { type: 'radio', name: 'meals', id: 'six', value: 'six' },
+    { type: 'radio', name: 'first-time', id: 'yes', value: 'yes' },
+    { type: 'radio', name: 'first-time', id: 'no', value: 'no' },
+    { type: 'radio', name: 'price-plan', id: 'basic', value: 'basic' },
+    { type: 'radio', name: 'price-plan', id: 'advanced', value: 'advanced' },
+    { type: 'radio', name: 'price-plan', id: 'premium', value: 'premium' },
+    { type: 'date', id: 'current-date', name: 'currentDate' }
+  ];
+  
+  fieldElements.forEach(field => {
+    const fieldElement = document.createElement('input');
+    fieldElement.type = field.type;
+    fieldElement.id = field.id;
+    fieldElement.name = field.name;
+    formElement.appendChild(fieldElement);
+  });
 }
