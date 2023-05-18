@@ -139,10 +139,14 @@ iframe{
   display: flex;
   gap: 1rem;
   padding-bottom: 2rem;
+  scale: 1.1;
 }
 .Slidder-btn{
   position: relative;
   padding: 0 1rem;
+  background-color: #19AA33;
+  color: white;
+  border-width: 0;
 }
 .btn-next{
   right: 0rem;
@@ -153,10 +157,14 @@ iframe{
   order: -1;
 }
 .item-link{
-  border: 2px solid black;
+  background-color: white;
+  color: #19AA33;
+  border: 2px solid #19AA33;
+  width: 2rem;
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
 }
 .btn-highlight{
   background-color: #19AA33;
+  color: white;
 }
