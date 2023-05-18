@@ -26,6 +26,7 @@ def registration_view(request, *args, **kwargs):
 		fullName_front = fName + ' ' + lName
 		gender_front = request.POST['gender-type']
 		mail_front = request.POST['mail']
+		phone_front = request.POST['phone']
 		age_front = request.POST['age']
 		job_front = request.POST['job']
 		relationship_front = request.POST['relationship']
@@ -51,7 +52,8 @@ def registration_view(request, *args, **kwargs):
 				chest_circumference= chest_front,waist_circumference= waist_front,arm_circumference= arm_front,
 			    food_allergy= foodAlergie_front, dieseases= sickness_front, surgeries= operations_front,
 			 	drugs_or_supplements= supplements_front,food_you_like= likedFood_front,food_you_do_not_like= dislikedFood_front, 
-			 	number_of_meals= meals_front, is_this_your_first_diet= firstTime_front, package= pricePlan_front, start_date= date_front)
+			 	number_of_meals= meals_front, is_this_your_first_diet= firstTime_front, package= pricePlan_front, start_date= date_front,
+				phone_number= phone_front)
 		newClient.save()
 
 		mail_sender(mail_front, "Hello " + fullName_front + "\n You are a step closer towards having your dream body shape!\n Please follow the following steps to complete your registration:\n 1- Pay the amount required \n 2- Reply to this email with a screenshot or a receipt of the payment \n 3- Congratulations on investing in yourself!! \n \n Warmly, \n Team Dr.Mohamed Barr", "Confirmation Mail")

@@ -47,8 +47,8 @@ class Client(models.Model):
 	number_of_meals = models.CharField(max_length=10, choices= meals, default="three")
 
 	did_he=(
-		('yes', "Yes"),
-		('no',"NO")
+		('no', "Yes"),
+		('yes',"NO")
 	)
 	is_this_your_first_diet = models.CharField(max_length=10, choices= did_he, default="yes")
 	

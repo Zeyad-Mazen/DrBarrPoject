@@ -12,6 +12,7 @@ const form1Inputs = [
   { input: document.getElementById('gender'), valid: false, name: 'gender' },
   { input: document.getElementById('marital status'), valid: false, name: 'marital status' },
   { input: document.getElementById('inputmail'), valid: false, name: 'inputmail' },
+  { input: document.getElementById('inputphone'), valid: false, name: 'inputphone' },
 ];
 
 // form2 variables
@@ -264,6 +265,7 @@ function handling_forms(Obj){
   document.getElementById('f-name').value = document.getElementById('inputfirst').value;
   document.getElementById('l-name').value = document.getElementById('inputlast').value;
   document.getElementById('mail').value = document.getElementById('inputmail').value;
+  document.getElementById('phone').value = document.getElementById('inputphone').value;
   document.getElementById('age').value = document.getElementById('inputage').value;
   document.getElementById('job').value = document.getElementById('inputproffession').value;
   radio_handler(document.querySelector('input[name = gender]:checked'));
@@ -332,6 +334,7 @@ function createCollector() {
     { type: 'radio', name: 'gender-type', id: 'male', value: 'male' },
     { type: 'radio', name: 'gender-type', id: 'female', value: 'female' },
     { type: 'email', id: 'mail', name: 'mail' },
+    { type: 'text', id: 'phone', name: 'phone' },
     { type: 'number', id: 'age', name: 'age' },
     { type: 'text', id: 'job', name: 'job' },
     { type: 'radio', name: 'relationship', id: 'single', value: 'single' },
@@ -365,6 +368,10 @@ function createCollector() {
     fieldElement.type = field.type;
     fieldElement.id = field.id;
     fieldElement.name = field.name;
+    if (fieldElement.type == 'radio') {
+      fieldElement.value = field.value;
+    }
     formElement.appendChild(fieldElement);
+    formElement.appendChild(document.createElement("br"));
   });
 }
