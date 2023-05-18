@@ -5,6 +5,7 @@ from Registration.models import Client
 import smtplib as smtp
 from email.message import EmailMessage
 import math
+from .models import PaymentData
 
 # Create your views here.
 def home_view(request, *args, **kwargs):
@@ -15,6 +16,10 @@ def home_view(request, *args, **kwargs):
 	return render(request, "index.html", context)
 
 def registration_view(request, *args, **kwargs):
+	Payment = PaymentData.objects.first()
+	context = {
+		'PaymentData': Payment
+	}
 	if request.method == 'POST':
 		fName = request.POST['fName']
 		lName = request.POST['lName']
@@ -50,7 +55,7 @@ def registration_view(request, *args, **kwargs):
 		newClient.save()
 
 		mail_sender(mail_front, "Hello " + fullName_front + "\n You are a step closer towards having your dream body shape!\n Please follow the following steps to complete your registration:\n 1- Pay the amount required \n 2- Reply to this email with a screenshot or a receipt of the payment \n 3- Congratulations on investing in yourself!! \n \n Warmly, \n Team Dr.Mohamed Barr", "Confirmation Mail")
-	return render(request, "registration.html",{})
+	return render(request, "registration.html", context)
 
 def mail_sender(reciver, massege, subject):
 	connection = smtp.SMTP_SSL('smtp.gmail.com', 465)	

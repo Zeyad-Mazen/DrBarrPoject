@@ -526,7 +526,7 @@
               <div class="popup" id="popup">
                 <br><br><br><br>
                 <p>تم التسجيل بنجاح
-                  من فضلك حول المبلغ على رقم فودافون كاش 01xxxxxxxxx
+                  من فضلك حول المبلغ على رقم فودافون كاش {{PaymentData.vCash_Num}}
                 </p>
                 <button type="button" onclick="location.href='index.html'" class="close imgbtn">
                   <img src="{% static 'home/img/done.svg' %}" alt="">
@@ -535,7 +535,7 @@
               <div class="popup" id="popup2">
                 <br><br><br><br>
                 <p>تم التسجيل بنجاح
-                  بالرجاء تحويل علي حساب رقم xxxx-xxxx-xxxx-xxxx
+                  بالرجاء تحويل علي حساب رقم {{PaymentData.bankAccount_Num}}
                 </p>
                 <button type="button" onclick="location.href='index.html'" class="close imgbtn">
                   <img src="{% static 'home/img/done.svg' %}" alt="">
