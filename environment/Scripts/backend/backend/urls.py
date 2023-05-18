@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from pages.views import registration_view, home_view, reel_view,contactUs_view
 
+
 urlpatterns = [
     
     path('admin/', admin.site.urls),
@@ -25,4 +26,5 @@ urlpatterns = [
     path('registration.html', registration_view, name= 'Registartion'),
     path('reels.html', reel_view, name= 'Reel'),
     path('contactUs.html', contactUs_view, name= 'contactUs'),
+ 
 ]

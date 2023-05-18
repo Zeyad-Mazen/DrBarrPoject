@@ -9,9 +9,7 @@ from datetime import datetime, timedelta, timezone
 
 
 class Client(models.Model):
-	full_name = models.CharField(max_length= 200)
-
-	
+	full_name = models.CharField(max_length= 200)	
 	gender_type=(
 		('male', "Male"),
 		('female',"Female")
@@ -54,7 +52,6 @@ class Client(models.Model):
 	)
 	is_this_your_first_diet = models.CharField(max_length=10, choices= did_he, default="yes")
 	
-
 	pack=(
 		('basic', "Basic"),
 		('advanced',"Advanced"),
@@ -64,12 +61,11 @@ class Client(models.Model):
 	start_date = models.DateField()
 
 	
-	
-	
 	phone_number = PhoneNumberField(blank=True, region="EG")
 	expiration_date = models.DateField(auto_now_add=True ,blank= True)
 	notes = models.CharField(max_length= 500, blank= True)
 	plan_update_date = models.DateTimeField(default=datetime.now(), blank=True)
+	paid = models.BooleanField(default=False, blank=True)
 
 	#latest_plan_sent = models.ForeignKey('DaysCountdown', on_delete=models.CASCADE, blank= True, null=True)
 	
