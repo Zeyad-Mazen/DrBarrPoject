@@ -5,7 +5,7 @@ from Registration.models import Client
 import smtplib as smtp
 from email.message import EmailMessage
 import math
-from .models import PaymentData
+from .models import *
 
 # Create your views here.
 def home_view(request, *args, **kwargs):
@@ -101,6 +101,9 @@ def contactUs_view(request, *args, **kwargs):
 		message_front = request.POST['message']
 
 		message = "From " + fullName_front + "\n\n" + message_front + "\n\n" + phone_front + "\n" + mail_front
+
+		newMessage = ClientsMessages(Client_Name= fullName_front,Client_Message= message)
+		newMessage.save()
 
 		mail_sender("dr.barr.customerservice@gmail.com", message, "A client massege")
 	return render(request, "contactUs.html", {})
