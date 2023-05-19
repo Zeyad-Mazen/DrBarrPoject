@@ -21,20 +21,11 @@
         }
     </style>
     <script>
-        function ajaxpost() {
-            // (A) GET FORM DATA
-            var form = document.getElementById("form-message");
-            var data = new FormData(form);
+        function ValidSubmit() {
+            
+            alert("Your Message Is Sent")
 
-            // (B) AJAX
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "{% url 'contactUs' %}");
-            // What to do when server responds
-            xhr.onload = function () { console.log(this.response); };
-            xhr.send(data);
-
-            // (C) PREVENT HTML FORM SUBMIT
-            return false;
+            return true;
         }
     </script>
 </head>
@@ -99,7 +90,7 @@
             <img src="{% static 'home/img/DR-Barr2.svg' %}" class="img-fluid" alt="">
         </div>
         <div class="Mycol" dir="rtl">
-            <form action="" method="POST" id="form-message" name="form1" onsubmit="return ajaxpost()">  {% csrf_token %}
+            <form action="" method="POST" id="form-message" name="form1" onsubmit="return ValidSubmit()">  {% csrf_token %}
                 <div class="row">
                     <div class="form-group col-md-4">
                         <label for="inputfirst">الاسم</label>
